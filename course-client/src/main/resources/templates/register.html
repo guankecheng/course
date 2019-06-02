@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>超级选课系统-注册</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/static/asserts/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/static/asserts/css/signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+<div th:if=" ${res eq false || res eq null} ">
+    <form class="form-signin" th:action="@{/user/sendEmail}" >
+        <img class="mb-4" src="/static/asserts/img/timg.jpg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <p style="color:red;" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+        <a class="btn btn-sm">注册邮箱</a>
+        <label class="sr-only">email</label>
+        <input type="text" name= "email" id = "email" class="form-control" placeholder="输入您的邮箱" required="" autofocus="">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">发送验证码</button>
+        <button class="btn btn-lg btn-primary btn-block" type="button"><a th:href="@{/login} " style= 'color: white; text-decoration:none'>登录</a></button>
+    </form>
+</div>
+<div th:if=" ${res eq true} ">
+<form class="form-signin" th:action="@{/user/register}" >
+    <img class="mb-4" src="/static/asserts/img/timg.jpg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <p style="color:red;" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+    <label class="sr-only">Email</label>
+    <a class="btn btn-sm">您的邮箱</a>
+    <input type="text" name= "email" class="form-control"  readonly unselectable="on" th:value="${email}" required="" autofocus="">
+    <label class="sr-only">Username</label>
+    <a class="btn btn-sm">用户名</a>
+    <input type="text" id = "username" name= "username" class="form-control" placeholder="输入您的用户名" required="" autofocus="">
+    <label class="sr-only">Password</label>
+    <a class="btn btn-sm">密码</a>
+    <input type="password" id = "password1" name= "password1" class="form-control" placeholder="输入您的密码" required="">
+    <!--<label class="sr-only">Password</label>-->
+    <!--<a class="btn btn-sm">再次输入密码</a>-->
+    <!--<input type="password" id = "password2"name= "password2" class="form-control" placeholder="请再输入一次" required="">-->
+    <label class="sr-only">code</label>
+    <input type="text" name= "code" id = "code" class="form-control" placeholder="输入你的收到的验证码" required="" autofocus="">
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="register">注册</button>
+    <button class="btn btn-lg btn-primary btn-block" type="button"><a th:href="@{/login} " style= 'color: white; text-decoration:none'>登录</a></button>
+
+    <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
+    <a class="btn btn-sm">中文</a>
+    <a class="btn btn-sm">English</a>
+</form>
+</div>
+<script th:inline="javascript">
+    var submit = document.getElementById("register");
+    submit.onclick = function(){
+//根据ID获取值
+
+
+        var username=document.getElementById("username").value;
+        var password1=document.getElementById("password1").value;
+        var password2=document.getElementById("password2").value;
+        var code=document.getElementById("code").value;
+        var email=document.getElementById("email").value;
+        if(username==""){
+            alert("用户名不能为空");
+            return false;
+
+        }
+        if(password1==""){
+            alert("密码不能为空");
+            return false;
+        }
+        if(password2==""){
+            alert("密码不能为空");
+            return false;
+        }
+        if(code==""){
+            alert("验证码不能为空");
+            return false;
+        }
+        if(password1!=password2){
+            alert("密码不相同");
+            return false;
+        }if(email=""){
+            alert("邮箱不能为空");
+            return false;
+        }
+
+        return true;
+
+
+
+    }
+</script>
+</body>
+
+</html>

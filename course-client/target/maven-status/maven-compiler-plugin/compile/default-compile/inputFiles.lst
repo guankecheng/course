@@ -1,0 +1,17 @@
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\config\TestConfig.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\Controller\LoginController.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\Controller\RegisterController.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\Utils\LoginHandlerInterceptor.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\model\FeignClientFallbackFactory.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\model\User.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\Controller\CourseController.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\interfaces\MyFeignClient.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\model\Course.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\Controller\ChooseController.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\service\OrderService.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\service\RegisterService.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\config\WebMvcConfig.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\model\Email.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\CourseClientApplication.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\model\Courseorder.java
+G:\JAVA\springcloud\course-client\src\main\java\com\guan\courseclient\service\CourseService.java
