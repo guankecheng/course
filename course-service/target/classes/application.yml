@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/course?serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: aq114477
+  application:
+    name: course-service
+  mail:
+    host: smtp.163.com
+    port: 465
+    username: SunShied@163.com
+    password: aq1314520
+    default-encoding: UTF-8
+
+#eureka.instance.prefer-ip-address=true
+#eureka.client.register-with-eureka=false
+server:
+  port: 8010
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.94.87.116:8761/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 47.93.38.166
+    hostname: vm-guan
